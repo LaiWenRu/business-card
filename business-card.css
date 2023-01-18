@@ -195,3 +195,7 @@ button{
     margin: 0px;
     padding: 0;
 }
+
+button{
+    cursor: pointer;
+}
