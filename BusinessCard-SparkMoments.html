@@ -90,6 +90,7 @@
 </html>
 
 <script>
+    const allContent = document.getElementsByClassName("allcontent")[0];
     const pages = document.querySelectorAll(".page");
     const translateAmount = 100; 
     let translate = 0;
@@ -99,7 +100,9 @@
       direction === "totop" ? translate -= translateAmount : translate += translateAmount;
 
       pages.forEach(
-        pages => (pages.style.transform = `translateY(${translate}%)`)
+        pages => (pages.style.transform = `translateY(${translate}vh)`)
       );
+
+        allContent.style.overflow = 'auto';
     }
 </script>
