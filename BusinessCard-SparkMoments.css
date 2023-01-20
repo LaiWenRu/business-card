@@ -64,13 +64,12 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    -webkit-mask: radial-gradient(circle at 0 50%, #1B1B1B, transparent 10%, transparent 0);
-    mask: radial-gradient(circle at 0 50%, #1B1B1B, transparent 10%, transparent 0);
+    -webkit-mask: linear-gradient(to right, #1B1B1B, transparent 10%, transparent 0);
+    mask: linear-gradient(to right, #1B1B1B, transparent 10%, transparent 0);
     -webkit-mask-size: 100%;
     mask-size: 100%;
     -webkit-animation: scale 10s infinite;
     animation: scale 10s infinite;
-
 }
 
 @-webkit-keyframes scale {
