@@ -35,7 +35,7 @@
                     </div>
                 </div>
             </div>
-            <div class="businesscard page">
+            <div id="businesscard" class="businesscard page">
                 <div class="toplogo">
                     <img class="logo" src="logo_深色-中文-橫.png">
                 </div>
@@ -92,6 +92,7 @@
 
 <script>
     const allContent = document.getElementsByClassName("allcontent")[0];
+    const both = document.getElementsByClassName("both")[0];
     const pages = document.querySelectorAll(".page");
     const translateAmount = 100; 
     let translate = 0;
@@ -104,6 +105,7 @@
         pages => (pages.style.transform = `translateY(${translate}vh)`)
       );
 
-        allContent.style.overflow = 'auto';
+        allContent.style.overflow = 'scroll';
+        allContent.style.setProperty('-webkit-overflow-scrolling', 'touch');
     }
 </script>

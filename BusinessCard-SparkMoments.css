@@ -19,13 +19,11 @@ body {
 }
 
 .allcontent{
-    width: 100%;
 	height: -webkit-fill-available;
 	overflow: hidden;
 }
 
 .both{
-    /* box-sizing: border-box;	 */
     height: inherit;
 }
 
