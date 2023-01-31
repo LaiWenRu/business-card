@@ -25,7 +25,9 @@
                     </div>
                 </div>
                 <div class="bottom">
-                    <button class="totop" onClick="slide('totop')">
+                    <button class="totop" 
+                    onClick="slide('totop')"  
+                    ontouchend="slide('totop')">
                         <img src="icon/向上箭頭(完整).svg">
                     </button>
                     <div class="selfcontent">
@@ -95,17 +97,18 @@
     const both = document.getElementsByClassName("both")[0];
     const pages = document.querySelectorAll(".page");
     const translateAmount = 100; 
+    let isPageSlided = false;
     let translate = 0;
 
-    slide = (direction) => {
-
+    function slide(direction) {
+        if(isPageSlided == true) return;
       direction === "totop" ? translate -= translateAmount : translate += translateAmount;
 
       pages.forEach(
         pages => (pages.style.transform = `translateY(${translate}vh)`)
       );
-
         allContent.style.overflow = 'scroll';
         allContent.style.setProperty('-webkit-overflow-scrolling', 'touch');
+        isPageSlided = true;
     }
 </script>
