@@ -1,0 +1,329 @@
+* {
+    font-family: 'Noto Sans TC', sans-serif;
+    font-family: 'Poppins', sans-serif;
+    /* border: solid 1px #F5F5F5; */
+    font-weight: 400;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+}
+
+.allcontent{
+	height: -webkit-fill-available;
+	overflow: hidden;
+}
+
+.both{
+    height: inherit;
+}
+
+.page{
+    transition: all 0.7s;
+}
+
+/* 登陸頁 */
+
+.landingpage{
+    max-width: 414px;
+    max-height: 915px;
+    width: 100%;
+    height: 100vh;
+    margin: auto;
+    background-color: #1B1B1B;
+    /* overflow: hidden; */
+}
+
+.slogan{
+    position: relative;
+    height: 75%;
+}
+
+.fly{
+    width: 90%;
+    height: 80%;
+    position:absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.slogancontnet{
+    position:absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-mask: linear-gradient(to right, #1B1B1B, transparent 10%, transparent 0);
+    mask: linear-gradient(to right, #1B1B1B, transparent 10%, transparent 0);
+    -webkit-mask-size: 100%;
+    mask-size: 100%;
+    -webkit-animation: scale 10s infinite;
+    animation: scale 10s infinite;
+}
+
+@-webkit-keyframes scale {
+    50%, 100% {
+      -webkit-mask-size: 3000%;
+              mask-size: 3000%;
+    }
+  }
+  
+@keyframes scale {
+    50%, 100% {
+      -webkit-mask-size: 3000%;
+              mask-size: 3000%;
+    }
+  }
+
+.bottom{
+    width: 100%;
+    max-width: 414px;
+    height: 25%;
+    border-radius: 20px 20px 0px 0px ;
+    border: 0;
+    background-color: #5E79DA;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: fixed;
+    bottom: 0px;
+}
+
+.selfcontent{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.spark, .every, .moments{
+    font-weight: 500;
+    font-size: 48px;
+    text-align: center;
+    margin: 20px;
+    color: #FFFFFF;
+}
+
+.shine{
+    color: #E9E9E9;
+    font-weight: 300;
+    font-size: 15px;
+    margin-left: 20px;
+    margin-right: 20px;
+    animation: blink 1.5s linear infinite;
+    -webkit-animation: blink 1.5s linear infinite;
+    -moz-animation: blink 1.5s linear infinite;
+    -ms-animation: blink 1.5s linear infinite;
+    -o-animation: blink 1.5s linear infinite;
+}
+
+@keyframes blink {
+    0% {
+        color: #E9E9E9;
+    }
+    50% {
+        color: transparent;
+    }
+    100% {
+        color: #E9E9E9;
+    }
+}
+
+.totop{
+    border: none;
+    background: none;
+}
+
+
+/* 個人名片頁面 */
+
+.businesscard{
+    max-width: 414px;
+    margin: auto;
+    background-color: #1B1B1B;
+}
+
+.toplogo{
+    width: 178px;
+}
+
+.logo{
+    width: 100%;
+}
+
+.mg0{
+    margin: 0;
+}
+
+.jobtitle ,.contactinfo{
+    margin-top: 38px;
+    margin-left: 32px;
+    margin-right: 32px;
+}
+
+ul {
+    margin: 0px;
+    padding: 0px;
+}
+
+li{
+    padding-top: 12px;
+    padding-bottom: 12px;
+    display: flex;
+    align-items: center;
+}
+
+.content{
+    margin-left: 16px;
+    font-weight: 300;
+    color: #FFFFFF;
+}
+
+.photoandname{
+    position: relative;
+    max-width: 414px;
+}
+
+.personphoto{
+    width: 100%;
+    -webkit-mask-image:linear-gradient(to top,transparent 0%,#1B1B1B 40%);
+    mask-image: linear-gradient(to top, transparent 0%, #1B1B1B 40%);
+}
+
+.name{
+    position: absolute;
+    bottom: 44px;
+    margin-left: 32px;
+    background-color: none;
+}
+
+.spacing01{
+    letter-spacing: 0.1em;
+}
+
+.gap10{
+    margin-left: 10px;
+}
+
+.actionbutton{
+    display: flex;
+    flex-direction:row;
+    justify-content: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.download , .linefriend{
+    width: 168px;
+    height: 56px;
+    border-radius: 12px; 
+    display: flex;
+    flex-direction:row;
+    justify-content: center;
+    align-items: center;
+}
+
+.download{
+    margin-right: 6px;
+    background-color: #5E79DA;
+    border: 0;
+    cursor: pointer;
+}
+
+
+.linefriend{
+    margin-left: 6px;
+    border: solid 1.5px #F5F5F5;
+    background: none;
+}
+
+.actionicon{
+    margin-left: 12px;
+}
+
+hr{
+    margin-left: 32px;
+    margin-right: 32px;
+    border:0;
+    background-color: #333333;
+    height: 1.5px;
+}
+
+.aboutcompany{
+    margin-top: 38px;
+    padding-bottom: 38px;
+    display: flex;
+    flex-direction:row;
+    justify-content: center;
+    align-items: center;
+}
+
+.iconbtn{
+    border: none;
+    background: none;
+}
+
+.companyicon{
+    margin: 10px;
+    margin-left: 12px;
+    margin-right: 12px;
+    border: none;
+}
+
+.fonttwenty{
+    font-size: 20px;
+}
+
+.fontforteen{
+    font-size: 14px;
+}
+
+.fontsixteen{
+    font-size: 16px;
+}
+
+.fontthirtytwo{
+    font-size: 32px;
+} 
+
+.grey{
+    color: #707070;
+}
+
+.darkgrey{
+    color: #D1D1D1;
+    font-weight:400;
+}
+
+.white{
+    color: #FFFFFF;
+}
+
+.iconbtn, .linefriend{
+    background-color: #1B1B1B;
+    cursor: pointer;
+}
+
+
+.fwsix{
+    font-weight: 600;
+}
+
+.companyicon{
+    width: 24px;
+}
+
+.mg0{
+    margin: 0px;
+    padding: 0;
+}

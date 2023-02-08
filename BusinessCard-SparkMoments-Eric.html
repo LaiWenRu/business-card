@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no">
+    <title>Spark Moments - 王文劭</title>
+    <link rel="stylesheet" href="BusinessCard-SparkMoments-Eric.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&family=Poppins:ital,wght@0,300;0,400;1,200&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="allcontent">
+        <div class="both">
+            <div class="landingpage page">
+                <div class="slogan">
+                    <div class="slogancontnet">
+                        <p class="spark">Spark</p>
+                        <p class="every">Every</p>
+                        <p class="moments">Moments</p>  
+                    </div>
+                    <div>
+                        <img class="fly" src="icon/飛散.svg">
+                    </div>
+                </div>
+                <div class="bottom">
+                    <button class="totop" 
+                    onClick="slide('totop')"  
+                    ontouchend="slide('totop')">
+                        <img src="icon/向上箭頭(完整).svg">
+                    </button>
+                    <div class="selfcontent">
+                        <span class="shine">Hello, I am Eric</span>
+                        <img src="icon/shine.svg">
+                        <span class="shine">Hello, I am Eric</span>
+                    </div>
+                </div>
+            </div>
+            <div id="businesscard" class="businesscard page">
+                <div class="toplogo">
+                    <img class="logo" src="logo_深色-中文-橫.png">
+                </div>
+                <div class="photoandname">
+                    <img class="personphoto" src="ru-photo.jpg">
+                    <div class="name" >
+                        <p class="fontthirtytwo fwsix spacing01 mg0 white">王文劭</p>
+                        <p class="fontsixteen mg0 white">Eric Wang</p>
+                    </div>
+                </div>
+                <div class="jobtitle">
+                    <span class="fonttwenty darkgrey spacing01"></span>
+                    <span class="fontforteen darkgrey gap10"></span>
+                </div>
+                <div class="contactinfo">
+                    <p class="fontforteen grey">聯絡資訊</p>
+                    <ul class="fontsixteen">
+                        <li>
+                            <img src="icon/Call.svg">
+                            <div class="content" onclick="location.href='tel:0912698113'">02-27689769</div>
+                        </li>
+                        <li>
+                            <img src="icon/Message.svg">
+                            <div class="content">eric891960@saprkmoments.co</div>
+                        </li>
+                        <li>
+                            <img src="icon/WEB.svg">
+                            <div class="content">www.sparkmoments.co</div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="actionbutton">
+                    <button class="download" onclick="location.href='https://www.vcard.link/card/DfRP.vcf'">
+                        <span class="fontsixteen white">儲存聯絡人</span>
+                        <img class="actionicon" src="icon/Union.svg">
+                    </button>
+                    <button class="linefriend" onclick="location.href='https://line.me/ti/p/3Zstb9AGH3'">
+                        <span class="fontsixteen white">加入好友</span>
+                        <img class="actionicon" src="icon/Line.svg">
+                    </button>
+                </div>
+                <hr>
+                <div class="aboutcompany">
+                    <button class="iconbtn"><img class="companyicon" src="icon/facebook.svg"></button>
+                    <button class="iconbtn"><img class="companyicon" src="icon/Instagram.svg"></button>
+                    <button class="iconbtn"><img class="companyicon" src="icon/Iconly.svg"></button>
+                    <button class="iconbtn"><img class="companyicon" src="icon/Youtube.svg"></button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+<script>
+    const allContent = document.getElementsByClassName("allcontent")[0];
+    const both = document.getElementsByClassName("both")[0];
+    const pages = document.querySelectorAll(".page");
+    const translateAmount = 100; 
+    let isPageSlided = false;
+    let translate = 0;
+
+    function slide(direction) {
+        if(isPageSlided == true) return;
+      direction === "totop" ? translate -= translateAmount : translate += translateAmount;
+
+      pages.forEach(
+        pages => (pages.style.transform = `translateY(${translate}vh)`)
+      );
+        allContent.style.overflow = 'scroll';
+        allContent.style.setProperty('-webkit-overflow-scrolling', 'touch');
+        isPageSlided = true;
+    }
+</script>
